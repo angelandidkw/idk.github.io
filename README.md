@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,7 +7,7 @@
         #content {
             text-align: center;
         }
-    #image {
+        #image {
             width: 200px;
             transition: width 0.5s ease;
         }
@@ -21,7 +22,7 @@
             margin: 4px 2px;
             transition-duration: 0.4s;
             cursor: pointer;
-        } 
+        }
         #noButton {
             background-color: #008CBA;
             border: 2px solid #008CBA;
@@ -66,9 +67,17 @@
             var thankYouMessage = document.getElementById('thankYouMessage');
 
             // Replace the content with a big "Thank You" image
-            content.innerHTML = '<img src="https://github.com/angelandidkw/websiteme.github.io/assets/148724145/9c149110-e51f-42e6-9a81-18eb0ab8e0d2" alt="Big Thank You Image">';
+            var thankYouImage = document.createElement('img');
+            thankYouImage.src = "https://github.com/angelandidkw/websiteme.github.io/assets/148724145/9c149110-e51f-42e6-9a81-18eb0ab8e0d2";
+            thankYouImage.alt = "Big Thank You Image";
+            thankYouImage.style.width = "300px"; // Set the desired width
+
+            thankYouMessage.appendChild(thankYouImage);
+
+            // You may want to display a message or perform additional actions here
         }
     </script>
 </body>
 
 </html>
+
