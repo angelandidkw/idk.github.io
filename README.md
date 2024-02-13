@@ -79,6 +79,33 @@
             thankYouContainer.style.display = 'block';
         }
     </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var noButton = document.getElementById('noButton');
+        var yesButton = document.getElementById('yesButton');
+
+        noButton.addEventListener('click', makeBigger);
+        yesButton.addEventListener('click', sayThankYou);
+    });
+
+    function makeBigger() {
+        var image = document.getElementById('image');
+        var currentWidth = image.offsetWidth;
+        image.style.width = (currentWidth + 50) + 'px';
+    }
+
+    function sayThankYou() {
+        var content = document.getElementById('content');
+        var thankYouContainer = document.getElementById('thankYouContainer');
+        var thankYouMessage = document.getElementById('thankYouMessage');
+
+        // Replace the content with a big "Thank You" message
+        thankYouMessage.innerHTML = '<img src="https://github.com/angelandidkw/websiteme.github.io/assets/148724145/9c149110-e51f-42e6-9a81-18eb0ab8e0d2" alt="Big Thank You Image">';
+
+        // Display the container with the "Thank You" message
+        thankYouContainer.style.display = 'block';
+    }
+</script>
 </body>
 
 </html>
