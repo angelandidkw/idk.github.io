@@ -7,12 +7,10 @@
         #content {
             text-align: center;
         }
-
-        #image {
+    #image {
             width: 200px;
             transition: width 0.5s ease;
         }
-
         .button {
             border: none;
             color: white;
@@ -24,28 +22,23 @@
             margin: 4px 2px;
             transition-duration: 0.4s;
             cursor: pointer;
-        }
-
+        } 
         #noButton {
             background-color: #008CBA;
             border: 2px solid #008CBA;
         }
-
         #noButton:hover {
             background-color: #004466;
             border: 2px solid #004466;
         }
-
         #yesButton {
             background-color: #04AA6D;
             border: 2px solid #04AA6D;
         }
-
         #yesButton:hover {
             background-color: #00663e;
             border: 2px solid #00663e;
         }
-
         #thankYouMessage {
             display: none;
         }
@@ -62,7 +55,7 @@
         <div id="thankYouMessage"></div>
     </div>
 
-    <script>
+<script>
         function makeBigger() {
             var image = document.getElementById('image');
             var currentWidth = image.offsetWidth;
