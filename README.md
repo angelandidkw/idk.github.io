@@ -7,11 +7,11 @@
         #content {
             text-align: center;
         }
-        #image {
+#image {
             width: 200px;
             transition: width 0.5s ease;
         }
-        .button {
+.button {
             border: none;
             color: white;
             padding: 16px 32px;
@@ -23,24 +23,27 @@
             transition-duration: 0.4s;
             cursor: pointer;
         }
-        #noButton {
+#noButton {
             background-color: #008CBA;
             border: 2px solid #008CBA;
         }
-        #noButton:hover {
+ #noButton:hover {
             background-color: #004466;
             border: 2px solid #004466;
         }
-        #yesButton {
+#yesButton {
             background-color: #04AA6D;
             border: 2px solid #04AA6D;
         }
-        #yesButton:hover {
+ #yesButton:hover {
             background-color: #00663e;
             border: 2px solid #00663e;
         }
-        #thankYouMessage {
+#thankYouContainer {
             display: none;
+        }
+#thankYouMessage {
+            width: 300px; /* Set the desired width */
         }
     </style>
 </head>
@@ -52,7 +55,9 @@
         <br>
         <button id="noButton" class="button" onclick="makeBigger()">No</button>
         <button id="yesButton" class="button" onclick="sayThankYou()">Yes</button>
-        <div id="thankYouMessage"></div>
+        <div id="thankYouContainer">
+            <div id="thankYouMessage"></div>
+        </div>
     </div>
 
 <script>
@@ -64,20 +69,18 @@
 
         function sayThankYou() {
             var content = document.getElementById('content');
+            var thankYouContainer = document.getElementById('thankYouContainer');
             var thankYouMessage = document.getElementById('thankYouMessage');
 
-            // Replace the content with a big "Thank You" image
-            var thankYouImage = document.createElement('img');
-            thankYouImage.src = "https://github.com/angelandidkw/websiteme.github.io/assets/148724145/9c149110-e51f-42e6-9a81-18eb0ab8e0d2";
-            thankYouImage.alt = "Big Thank You Image";
-            thankYouImage.style.width = "300px"; // Set the desired width
-
-            thankYouMessage.appendChild(thankYouImage);
-
-            // You may want to display a message or perform additional actions here
+            // Replace the content with a big "Thank You" message
+            thankYouMessage.innerHTML = '<img src="https://github.com/angelandidkw/websiteme.github.io/assets/148724145/9c149110-e51f-42e6-9a81-18eb0ab8e0d2" alt="Big Thank You Image">';
+            
+            // Display the container with the "Thank You" message
+            thankYouContainer.style.display = 'block';
         }
     </script>
 </body>
 
 </html>
+
 
